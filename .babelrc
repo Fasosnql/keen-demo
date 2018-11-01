@@ -1,0 +1,41 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        "react-intl",
+        "styled-components"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        ["styled-components", {"minify": false}]
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "extensions": [".js"],
+        "alias": {
+          "configs": "./src/configs",
+          "components": "/src/components",
+          "containers": "./src/containers",
+          "src": "./src",
+          "utils": "./src/utils",
+          "static": "./src/static"
+        }
+      }
+    ],
+    "transform-class-properties",
+    "syntax-class-properties"
+  ]
+}

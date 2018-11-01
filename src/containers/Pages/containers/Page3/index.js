@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import KeenTrack from 'components/KeenTrack';
 
 class Page3 extends Component {
   render() {
@@ -10,4 +11,6 @@ class Page3 extends Component {
   }
 }
 
-export default Page3;
+export default KeenTrack({
+  item: 'page3'
+})(Page3);

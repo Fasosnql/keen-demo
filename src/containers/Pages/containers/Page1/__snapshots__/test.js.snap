@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page1 component renders correctly 1`] = `
+<div>
+  page1
+</div>
+`;

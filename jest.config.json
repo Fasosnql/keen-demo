@@ -1,0 +1,4 @@
+{
+  "setupFiles": ["raf/polyfill"],
+  "roots": ["./src"]
+}

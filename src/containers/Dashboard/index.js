@@ -59,7 +59,7 @@ class Dashboard extends React.Component {
                   ))}
                 </DataTextWrapper>
                 <DataChartWrapper>
-                  <Chart />
+                  <Chart chartData={this.state.pageViews} />
                 </DataChartWrapper>
               </div>
             )}

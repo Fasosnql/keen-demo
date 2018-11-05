@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import KeenTrack from 'components/KeenTrack';
+import Page1Layout from 'components/Layouts/Page1Layout';
 
 class Page1 extends Component {
   render() {
-    return (
-      <div>
-        page1
-      </div>
-    );
+    return (<Page1Layout />);
   }
 }
 

@@ -2,13 +2,8 @@ import React from 'react';
 import KeenAnalysis from 'keen-analysis';
 
 import PageLayout from 'components/PageLayout';
-import Chart from 'components/Chart';
+import DashboardLayout from 'components/Layouts/DashboardLayout';
 import config from 'configs/mainConfig';
-import {
-  DataTextWrapper,
-  DataChartWrapper,
-  HeaderLine,
-} from './styles';
 
 class Dashboard extends React.Component {
   constructor() {
@@ -48,21 +43,7 @@ class Dashboard extends React.Component {
       <PageLayout>
         {!this.state.pageViews.length ? 'Loading...' : (
           <div>
-            {this.state.error || (
-              <div>
-                <DataTextWrapper>
-                  <HeaderLine>PAGE VIEWS:</HeaderLine>
-                  {this.state.pageViews.map((item) => (
-                    <div key={item.item}>
-                      {item.item}: {item.result}
-                    </div>
-                  ))}
-                </DataTextWrapper>
-                <DataChartWrapper>
-                  <Chart chartData={this.state.pageViews} />
-                </DataChartWrapper>
-              </div>
-            )}
+            {this.state.error || (<DashboardLayout pageViews={this.state.pageViews} />)}
           </div>
         )}
       </PageLayout>

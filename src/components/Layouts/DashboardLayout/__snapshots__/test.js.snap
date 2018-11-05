@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Layout renders correctly 1`] = `
+<div>
+  <div
+    className="styles__DataTextWrapper-sc-9lj0p3-0 heakav"
+  >
+    <h5
+      className="styles__HeaderLine-sc-9lj0p3-2 htGqst"
+    >
+      PAGE VIEWS:
+    </h5>
+  </div>
+  <div
+    className="styles__DataChartWrapper-sc-9lj0p3-1 dbgspN"
+  >
+    <div />
+  </div>
+</div>
+`;

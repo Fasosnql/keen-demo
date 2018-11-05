@@ -68,6 +68,10 @@ exports[`Page Layout component renders correctly 1`] = `
   </div>
   <div
     className="row"
-  />
+  >
+    <div>
+      test children
+    </div>
+  </div>
 </div>
 `;

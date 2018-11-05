@@ -4,8 +4,9 @@ import { MemoryRouter } from 'react-router-dom';
 
 import snapshotTest from 'utils/snapshot-test.util';
 
+const children = (<div>test children</div>);
 snapshotTest('Page Layout component renders correctly', (
   <MemoryRouter>
-    <PageLayout />
+    <PageLayout children={children} />
   </MemoryRouter>
 ));

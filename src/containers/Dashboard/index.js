@@ -9,6 +9,7 @@ class Dashboard extends React.Component {
   constructor() {
     super();
     this.state = {
+      isLoading: true,
       pageViews: [],
       error: '',
     };
@@ -28,11 +29,13 @@ class Dashboard extends React.Component {
       })
       .then(res => {
         this.setState({
+          isLoading: false,
           pageViews: res.result,
         });
       })
       .catch(err => {
         this.setState({
+          isLoading: false,
           error: err.errorCode,
         });
       });
@@ -41,7 +44,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <PageLayout>
-        {!this.state.pageViews.length ? 'Loading...' : (
+        {this.state.isLoading ? 'Loading...' : (
           <div>
             {this.state.error || (<DashboardLayout pageViews={this.state.pageViews} />)}
           </div>

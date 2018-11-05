@@ -1,5 +1,6 @@
 import React from 'react';
-import { Router, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import {
@@ -35,5 +36,10 @@ const PageLayout = ({ children }) => (
     </Row>
   </Grid>
 );
+
+
+PageLayout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default PageLayout;

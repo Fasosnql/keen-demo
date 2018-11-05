@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Chart from 'components/Chart';
 import {
@@ -22,5 +23,10 @@ const DashboardLayout = ({ pageViews }) => (
     </DataChartWrapper>
   </div>
 );
+
+
+DashboardLayout.propTypes = {
+  pageViews: PropTypes.array.isRequired
+};
 
 export default DashboardLayout;
